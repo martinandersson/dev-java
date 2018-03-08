@@ -1,16 +1,87 @@
 ---
-- name: Provision all
-  hosts: all
+- name: Perform full upgrade
+  hosts: dev-java-9
+  gather_facts: no
   become: yes
   tasks:
-  - name: Update apt's repository indices
+  - name: Do upgrade
     apt:
-      cache_valid_time: 3600  # ..seconds = 1 hour
-    when: ansible_distribution in ['Ubuntu', 'Debian']
+      update_cache: yes
+      upgrade: dist
+    register: upgrade
+  # https://github.com/ansible/ansible/issues/26521#issuecomment-371142617
+  - name: Remove nondownloadable packages from cache
+    apt:
+      autoclean: yes
+    when: upgrade|succeeded
+  - name: Remove and purge orphaned packages
+    apt:
+      autoremove: yes
+      purge: yes
+    when: upgrade|succeeded
 
-- name: Yet another provisioning example
-  hosts: my-ubuntu
+- name: Install GitKraken
+  hosts: dev-java-9
   gather_facts: no
+  become: yes
   tasks:
-  - name: Greet
-    debug: msg="Hello, World!"
+  # The apt module will always download the GitKraken deb archive unless we intervene..
+  - name: Figure out if GitKraken is installed
+    stat: path=/usr/bin/gitkraken
+    register: cmd
+  - name: Add package
+    when: cmd.stat.exists == false
+    apt: deb="https://release.gitkraken.com/linux/gitkraken-amd64.deb"
+
+- name: Install Gradle
+  hosts: dev-java-9
+  gather_facts: no
+  become: yes
+  tasks:
+  # https://askubuntu.com/a/975018
+  - name: Add repository
+    apt_repository: repo=ppa:cwchien/gradle
+  - name: Add package
+    apt: name=gradle
+
+- name: Install Oracle JDK 9
+  hosts: dev-java-9
+  gather_facts: no
+  become: yes
+  tasks:
+  # IntelliJ can not use OpenJDK. So, install Oracle.
+  # https://stackoverflow.com/questions/47296429
+  - name: Add repository
+    apt_repository: repo=ppa:webupd8team/java
+  # https://stackoverflow.com/a/26591300
+  - name: Blindly accept Oracle's license
+    debconf:
+      name: oracle-java9-installer
+      question: shared/accepted-oracle-license-v1-1
+      value: "true"
+      vtype: select
+  - name: Add package
+    apt: name=oracle-java9-installer
+
+- name: Install IntelliJ IDEA
+  hosts: dev-java-9
+  gather_facts: no
+  become: yes
+  tasks:
+  - name: Add Snap package
+    apt: name=snap
+  - name: Read installed snaps
+    command: snap list
+    register: snaps
+  - name: Snap-install package
+    command: snap install intellij-idea-community --classic --edge
+    when: "'intellij-idea-community' not in snaps.stdout"
+
+- name: Install Visual Studio Code
+  hosts: dev-java-9
+  gather_facts: no
+  become: yes
+  tasks:
+  - name: Snap-install package
+    command: snap install vscode --classic
+    when: "'vscode' not in snaps.stdout"

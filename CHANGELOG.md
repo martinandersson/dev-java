@@ -2,8 +2,17 @@
 
 All noteworthy changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and this project **tries to** adhere to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog][1].
+
+This project **tries to** adhere to [Semantic Versioning][2]. More specifically,
+the major version follows that of the [upstream][3] repository. If these version
+numbers are the same, then the configuration model "should" also be the same.
+Software and runtimes removed will bump the minor version. Software added and
+other miscellaneous changes will increment the minor version.
+
+[1]: http://keepachangelog.com/en/1.0.0/
+[2]: http://semver.org/spec/v2.0.0.html
+[3]: https://github.com/martinanderssondotcom/dev-mini
 
 ## [Unreleased]
 

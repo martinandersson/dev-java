@@ -16,7 +16,12 @@ added and other miscellaneous changes will increment the minor version.
 
 ## [Unreleased]
 
-Nothing yet!
+### Changed
+
+- GitKraken installs not thru `apt`, but rather, thru `snap`
+  ([issue #1][unreleased-1]).
+
+[unreleased-1]: https://github.com/martinanderssondotcom/dev-java-9/issues/1
 
 ## 2.0.0 - 2018-03-23
 

@@ -18,7 +18,7 @@ added and other miscellaneous changes will increment the minor version.
 
 Nothing yet!
 
-## 1.0.0 - 2018-03-22
+## 2.0.0 - 2018-03-23
 
 First tag.
 
@@ -31,4 +31,4 @@ First tag.
 - `LICENSE`
 - `README.md`
 
-[Unreleased]: https://github.com/martinanderssondotcom/dev-java-9/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/martinanderssondotcom/dev-java-9/compare/v2.0.0...HEAD

@@ -20,19 +20,6 @@
       purge: yes
     when: upgrade|succeeded
 
-- name: Install GitKraken
-  hosts: dev-java-9
-  gather_facts: no
-  become: yes
-  tasks:
-  # The apt module will always download the GitKraken deb archive unless we intervene..
-  - name: Figure out if GitKraken is installed
-    stat: path=/usr/bin/gitkraken
-    register: cmd
-  - name: Add package
-    when: cmd.stat.exists == false
-    apt: deb="https://release.gitkraken.com/linux/gitkraken-amd64.deb"
-
 - name: Install Gradle
   hosts: dev-java-9
   gather_facts: no
@@ -63,18 +50,31 @@
   - name: Add package
     apt: name=oracle-java9-installer
 
+- name: Figure out which snaps are installed
+  hosts: dev-java-9
+  gather_facts: no
+  become: yes
+  tasks:
+  - name: Install Snap, if missing
+    apt: name=snap
+  - name: Read list
+    command: snap list
+    register: snaps
+
+- name: Install GitKraken
+  hosts: dev-java-9
+  gather_facts: no
+  become: yes
+  tasks:
+  - command: snap install gitkraken
+    when: "'gitkraken' not in snaps.stdout"
+
 - name: Install IntelliJ IDEA
   hosts: dev-java-9
   gather_facts: no
   become: yes
   tasks:
-  - name: Add Snap package
-    apt: name=snap
-  - name: Read installed snaps
-    command: snap list
-    register: snaps
-  - name: Snap-install package
-    command: snap install intellij-idea-community --classic --edge
+  - command: snap install intellij-idea-community --classic --edge
     when: "'intellij-idea-community' not in snaps.stdout"
 
 - name: Install Visual Studio Code
@@ -82,6 +82,5 @@
   gather_facts: no
   become: yes
   tasks:
-  - name: Snap-install package
-    command: snap install vscode --classic
+  - command: snap install vscode --classic
     when: "'vscode' not in snaps.stdout"

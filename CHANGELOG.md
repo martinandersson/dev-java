@@ -16,7 +16,7 @@ added and other miscellaneous changes will increment the minor version.
 
 ## [Unreleased]
 
-### Changed
+### Fixed
 
 - GitKraken installs not thru `apt`, but rather, thru `snap`
   ([issue #1][unreleased-1]).

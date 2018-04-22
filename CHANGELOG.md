@@ -16,6 +16,18 @@ miscellaneous changes will bump the patch version.
 
 ## [Unreleased]
 
+Changed
+
+- Nothing, yet!
+
+## [2.1.0] - 2018-04-22
+
+### Changed
+
+- Merged `v2.1.0` from `martinanderssondotcom/dev-mini` (see [upstream changelog][2.1.0-1]).
+
+[2.1.0-1]: https://github.com/martinanderssondotcom/dev-mini/blob/master/CHANGELOG.md#210---2018-04-22
+
 ### Fixed
 
 - GitKraken installs not thru `apt`, but rather, thru `snap`
@@ -36,4 +48,5 @@ First tag.
 - `LICENSE`
 - `README.md`
 
-[Unreleased]: https://github.com/martinanderssondotcom/dev-java-9/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/martinanderssondotcom/dev-java-9/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/martinanderssondotcom/dev-java-9/compare/v2.0.0...v2.1.0

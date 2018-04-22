@@ -1,7 +1,7 @@
-# A Java 9 development environment
+# A Java development environment
 
 This project is effectively a "fork" of [dev-mini][intro-1], with the addition
-of software for Java 9 development.
+of software for Java development.
 
 Clone or otherwise copy-paste repo, then do `vagrant up`.
 

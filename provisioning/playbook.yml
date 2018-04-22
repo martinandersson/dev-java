@@ -13,12 +13,12 @@
   - name: Remove nondownloadable packages from cache
     apt:
       autoclean: yes
-    when: upgrade|succeeded
+    when: upgrade is succeeded
   - name: Remove and purge orphaned packages
     apt:
       autoremove: yes
       purge: yes
-    when: upgrade|succeeded
+    when: upgrade is succeeded
 
 - name: Install Gradle
   hosts: dev-java-9

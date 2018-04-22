@@ -31,24 +31,13 @@
   - name: Add package
     apt: name=gradle
 
-- name: Install Oracle JDK 9
+- name: Install default JDK
   hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
-  # IntelliJ can not use OpenJDK. So, install Oracle.
-  # https://stackoverflow.com/questions/47296429
-  - name: Add repository
-    apt_repository: repo=ppa:webupd8team/java
-  # https://stackoverflow.com/a/26591300
-  - name: Blindly accept Oracle's license
-    debconf:
-      name: oracle-java9-installer
-      question: shared/accepted-oracle-license-v1-1
-      value: "true"
-      vtype: select
   - name: Add package
-    apt: name=oracle-java9-installer
+    apt: name=default-jdk
 
 - name: Figure out which snaps are installed
   hosts: dev-java

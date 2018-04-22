@@ -1,6 +1,6 @@
 ---
 - name: Perform full upgrade
-  hosts: dev-java-9
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
@@ -21,7 +21,7 @@
     when: upgrade is succeeded
 
 - name: Install Gradle
-  hosts: dev-java-9
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
@@ -32,7 +32,7 @@
     apt: name=gradle
 
 - name: Install Oracle JDK 9
-  hosts: dev-java-9
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
@@ -51,7 +51,7 @@
     apt: name=oracle-java9-installer
 
 - name: Figure out which snaps are installed
-  hosts: dev-java-9
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
@@ -62,7 +62,7 @@
     register: snaps
 
 - name: Install GitKraken
-  hosts: dev-java-9
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
@@ -70,7 +70,7 @@
     when: "'gitkraken' not in snaps.stdout"
 
 - name: Install IntelliJ IDEA
-  hosts: dev-java-9
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
@@ -78,7 +78,7 @@
     when: "'intellij-idea-community' not in snaps.stdout"
 
 - name: Install Visual Studio Code
-  hosts: dev-java-9
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:

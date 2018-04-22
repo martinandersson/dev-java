@@ -33,7 +33,7 @@ Changed
 - GitKraken installs not thru `apt`, but rather, thru `snap`
   ([issue #1][unreleased-1]).
 
-[unreleased-1]: https://github.com/martinanderssondotcom/dev-java-9/issues/1
+[unreleased-1]: https://github.com/martinanderssondotcom/dev-java/issues/1
 
 ## 2.0.0 - 2018-03-23
 
@@ -48,5 +48,5 @@ First tag.
 - `LICENSE`
 - `README.md`
 
-[Unreleased]: https://github.com/martinanderssondotcom/dev-java-9/compare/v2.1.0...HEAD
-[2.1.0]: https://github.com/martinanderssondotcom/dev-java-9/compare/v2.0.0...v2.1.0
+[Unreleased]: https://github.com/martinanderssondotcom/dev-java/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/martinanderssondotcom/dev-java/compare/v2.0.0...v2.1.0

@@ -24,7 +24,10 @@ Changed
 
 ### Changed
 
-- Merged `v2.1.0` from `martinanderssondotcom/dev-mini` (see [upstream changelog][2.1.0-1]).
+- Merge `v2.1.0` from `martinanderssondotcom/dev-mini` (see [upstream changelog][2.1.0-1]).
+- Replace Oracle JDK 9 with the default JDK package (Java has a new and really
+  fast release cycle).
+- Rename project from `dev-java-9` to `dev-java`.
 
 [2.1.0-1]: https://github.com/martinanderssondotcom/dev-mini/blob/master/CHANGELOG.md#210---2018-04-22
 

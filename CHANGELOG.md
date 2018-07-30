@@ -20,6 +20,14 @@ Changed
 
 - Nothing, yet!
 
+## [2.2.0] - 2018-07-30
+
+### Changed
+
+- Merge `v2.2.0` from `martinanderssondotcom/dev-mini` (see [upstream changelog][2.2.0-1]).
+
+[2.2.0-1]: https://github.com/martinanderssondotcom/dev-mini/blob/master/CHANGELOG.md#220---2018-07-30
+
 ## [2.1.0] - 2018-04-22
 
 ### Changed
@@ -51,5 +59,6 @@ First tag.
 - `LICENSE`
 - `README.md`
 
-[Unreleased]: https://github.com/martinanderssondotcom/dev-java/compare/v2.1.0...HEAD
+[Unreleased]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/martinanderssondotcom/dev-java/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/martinanderssondotcom/dev-java/compare/v2.0.0...v2.1.0

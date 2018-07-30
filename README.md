@@ -11,13 +11,13 @@ Clone or otherwise copy-paste repo, then do `vagrant up`.
 
 Latest and greatest of the following apps will be installed during provisioning:
 
-|                                 | Version on 2018-04-22     |
+|                                 | Version on 2018-07-30     |
 | ------------------------------- | ------------------------- |
-| GitKraken                       | 3.5.1                     |
-| Gradle                          | 4.7                       |
-| Ubuntu-default JDK              | OpenJDK 10.0.1 2018-04-17 |
-| IntelliJ IDEA Community Edition | 2018.1.2                  |
-| Visual Studio Code              | 1.20.1-1518535978         |
+| GitKraken                       | 3.6.6                     |
+| Gradle                          | 4.9                       |
+| Ubuntu-default JDK              | OpenJDK 10.0.2 2018-07-17 |
+| IntelliJ IDEA Community Edition | 2018.2.1                  |
+| Visual Studio Code              | 1.25.1                    |
 
 Please note that versions installed might be different if the machine is setup
 and provisioned on any other date than what is specified in the table header.

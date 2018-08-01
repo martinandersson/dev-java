@@ -36,8 +36,9 @@
   gather_facts: no
   become: yes
   tasks:
-  - name: Add package
-    apt: name=default-jdk
+  - name: Add packages
+    apt:
+      name: [default-jdk, default-jdk-doc]
 
 - name: Figure out which snaps are installed
   hosts: dev-java

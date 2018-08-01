@@ -16,9 +16,9 @@ miscellaneous changes will bump the patch version.
 
 ## [Unreleased]
 
-Changed
+Added
 
-- Nothing, yet!
+- Added package `default-jdk-doc`.
 
 ## [2.2.0] - 2018-07-30
 

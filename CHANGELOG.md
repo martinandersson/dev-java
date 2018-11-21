@@ -16,9 +16,19 @@ miscellaneous changes will bump the patch version.
 
 ## [Unreleased]
 
-Added
+- Nothing, yet!
 
-- Added package `default-jdk-doc`.
+## [2.2.1] - 2018-11-21
+
+### Added
+
+- Add package `default-jdk-doc`.
+
+### Changed
+
+- Merge `v2.2.1` from `martinanderssondotcom/dev-mini` (see [upstream changelog][2.2.1-1]).
+
+[2.2.1-1]: https://github.com/martinanderssondotcom/dev-mini/blob/master/CHANGELOG.md#221---2018-11-21
 
 ## [2.2.0] - 2018-07-30
 
@@ -59,6 +69,7 @@ First tag.
 - `LICENSE`
 - `README.md`
 
-[Unreleased]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.0...HEAD
+[Unreleased]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.1...HEAD
+[2.2.1]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/martinanderssondotcom/dev-java/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/martinanderssondotcom/dev-java/compare/v2.0.0...v2.1.0

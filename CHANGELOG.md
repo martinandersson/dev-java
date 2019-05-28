@@ -18,6 +18,14 @@ miscellaneous changes will bump the patch version.
 
 - Nothing, yet!
 
+## [2.2.2] - 2019-05-28
+
+### Changed
+
+- Merge `v2.2.2` from `martinanderssondotcom/dev-mini` (see [upstream changelog][2.2.1-1]).
+
+[2.2.1-1]: https://github.com/martinanderssondotcom/dev-mini/blob/master/CHANGELOG.md#222---2019-03-07
+
 ## [2.2.1] - 2018-11-21
 
 ### Added
@@ -69,7 +77,8 @@ First tag.
 - `LICENSE`
 - `README.md`
 
-[Unreleased]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.1...HEAD
+[Unreleased]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.2...HEAD
+[2.2.2]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.1...v2.2.2
 [2.2.1]: https://github.com/martinanderssondotcom/dev-java/compare/v2.2.0...v2.2.1
 [2.2.0]: https://github.com/martinanderssondotcom/dev-java/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/martinanderssondotcom/dev-java/compare/v2.0.0...v2.1.0

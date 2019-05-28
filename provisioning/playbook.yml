@@ -88,5 +88,5 @@
   gather_facts: no
   become: yes
   tasks:
-  - command: snap install vscode --classic
-    when: "'vscode' not in snaps.stdout"
+  - command: snap install code --classic
+    when: "'code' not in snaps.stdout"

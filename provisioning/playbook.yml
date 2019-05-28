@@ -72,7 +72,7 @@
   gather_facts: no
   become: yes
   tasks:
-  - command: snap install intellij-idea-community --classic --edge
+  - command: snap install intellij-idea-community --classic
     when: "'intellij-idea-community' not in snaps.stdout"
 
 - name: Install NetBeans

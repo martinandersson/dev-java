@@ -16,13 +16,16 @@ miscellaneous changes will bump the patch version.
 
 ## [Unreleased]
 
-- Nothing, yet!
+### Changed
+
+- Snap package `intellij-idea-community` moved from channel `edge` to `stable`.
+- Snap package `vscode` replaced with Microsoft's official snap `code`.
 
 ## [2.2.3] - 2019-05-28
 
 ### Added
 
-- Snap package `netbeans` (resolves [#3][2.2.3-2])
+- Snap package `netbeans` (resolves [#3][2.2.3-2]).
 
 ### Changed
 

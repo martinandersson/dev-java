@@ -3,8 +3,8 @@
 
 CONFIGURATION = {
   machines: 'dev-java',
-  # https://github.com/martinanderssondotcom/box-ubuntu-budgie-18-x64
-  box: 'pristine/ubuntu-budgie-18-x64',
+  # https://github.com/martinanderssondotcom/box-ubuntu-budgie-19.04
+  box: 'pristine/ubuntu-budgie-19.04',
   first_ip: '192.168.60.20',
   cpus: Etc.nprocessors,
   memory_mb: 4096
@@ -185,7 +185,7 @@ Vagrant.configure('2') do |config|
       # sure wtf that flag does. See:
       # https://www.vagrantup.com/docs/provisioning/ansible_local.html#options
       ansible.install_mode = :pip_args_only
-      ansible.pip_args = 'ansible==2.7.8'
+      ansible.pip_args = 'ansible==2.8.0'
       
       roles_file = 'provisioning/requirements.yml'
       

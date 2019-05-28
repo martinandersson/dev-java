@@ -75,6 +75,14 @@
   - command: snap install intellij-idea-community --classic --edge
     when: "'intellij-idea-community' not in snaps.stdout"
 
+- name: Install NetBeans
+  hosts: dev-java
+  gather_facts: no
+  become: yes
+  tasks:
+  - command: snap install netbeans --classic
+    when: "'netbeans' not in snaps.stdout"
+
 - name: Install Visual Studio Code
   hosts: dev-java
   gather_facts: no

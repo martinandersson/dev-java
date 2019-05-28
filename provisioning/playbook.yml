@@ -52,7 +52,7 @@
     register: snaps
 
 - name: Install gedit
-  hosts: my-ubuntu
+  hosts: dev-java
   gather_facts: no
   become: yes
   tasks:
